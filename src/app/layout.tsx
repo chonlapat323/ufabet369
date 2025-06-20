@@ -1,4 +1,10 @@
 import "./globals.css";
+import { Sarabun } from "next/font/google";
+
+const sarabun = Sarabun({
+  subsets: ["thai"],
+  weight: ["300", "400", "500", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -7,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={sarabun.className}>{children}</body>
     </html>
   );
 }

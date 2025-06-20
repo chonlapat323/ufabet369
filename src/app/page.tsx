@@ -1,6 +1,12 @@
-import ContentSection from "@/components/ContentSection";
+import ContactGrid from "@/components/ContactGrid";
+import EsportsPartners from "@/components/EsportsPartners";
+import FinalFooter from "@/components/FinalFooter";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import InfoBar from "@/components/InfoBar";
+import InfoGrid from "@/components/InfoGrid";
+import ThreeColumnCta from "@/components/ThreeColumnCta";
 
 export default function Home() {
   const sectionOneData = {
@@ -13,17 +19,28 @@ export default function Home() {
     imageAlt: "ถ่ายทอดสดมวยไทย",
   };
 
+  const sectionTwoData = {
+    title: "สมัครเว็บแทงบอล อันดับ 1 ดีที่สุดและมั่นคงที่สุด",
+    paragraphs: [
+      "เว็บแทงบอล UFABET369 เราคือตัวแทน เว็บพนันออนไลน์ โดยตรงจาก ufabet เว็บเล่น แทงบอลออนไลน์ อันดับ 1 ที่เป็นที่นิยมใช้บริการ มากที่สุดในประเทศไทย รับเดิมพันกีฬาออนไลน์ และคาสิโนทุกประเภท สามารถเข้า เว็บแทงบอลออนไลน์ ผ่านเว็บไซต์ หรือ บนมือถือ (iPhone หรือ Android) ซึ่งมีระบบรักษาความปลอดภัยที่เชื่อถือได้ และมีมาตรฐานสากลระดับโลก ในการรองรับการแทงบอลออนไลน์ผ่านเน็ต และ พนันกีฬาออนไลน์ หรือ เว็บคาสิโน ที่หลากหลาย พร้อมให้บริการตลอด 24 ชั่วโมง",
+      "โดยสามารถติดต่อได้ผ่านทางโทรศัพท์ แชทผ่านหน้าเว็บไซต์ หรือทางไลน์ โดยมีพนักงานมืออาชีพที่คอยให้บริการตลอดเวลาโดยที่ไม่มีวันหยุด ใช้เวลาในการฝาก ไม่เกิน 5 วินาที และถอนไม่เกิน 15 วินาที พร้อมมีโปรโมชั่นพิเศษมากมาย",
+    ],
+    imageUrl: "",
+    imageAlt: "",
+  };
+
   return (
     <>
       <Header />
       <main>
         <HeroSection />
-        <ContentSection
-          title={sectionOneData.title}
-          paragraphs={sectionOneData.paragraphs}
-          imageUrl={sectionOneData.imageUrl}
-          imageAlt={sectionOneData.imageAlt}
-        />
+        <InfoBar />
+        <InfoGrid />
+        <ContactGrid />
+        <ThreeColumnCta />
+        <EsportsPartners />
+        <Footer />
+        <FinalFooter />
       </main>
     </>
   );

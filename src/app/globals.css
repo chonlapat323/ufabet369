@@ -6,7 +6,8 @@
     --color-golden-border: 146 109 0; /* #926D00 */
 
     /* --- Text Colors --- */
-    --color-text-title: 198 193 109;
+    --color-text-title: #ffce6d;
+    --color-text-strong: #ffad0b;
     --color-text-light: 255 255 255;
     --color-text-dark: 26 26 26;
     --color-text-input: 55 65 81; /* #374151 */

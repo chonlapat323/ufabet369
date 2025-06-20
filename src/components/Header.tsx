@@ -8,8 +8,7 @@ const Header = () => {
     <>
       <header>
         <div
-          className="
-        max-w-[1100px] mx-auto px-4 py-[10px]
+          className="max-w-6xl mx-auto px-4 py-[10px]
         border-2  border-[rgb(var(--color-golden-border))] rounded-[5px]
         flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-y-6 lg:gap-y-0
       "
