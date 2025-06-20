@@ -32,6 +32,10 @@ const MainMenu = () => {
             <li key={item}>
               <a
                 href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // ป้องกันพฤติกรรมปกติของลิงก์ (ไม่ให้หน้าเลื่อน)
+                  alert(`คุณได้คลิกที่เมนู: ${item}`); // แสดง alert พร้อมชื่อเมนู
+                }}
                 className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
               >
                 {item}
@@ -100,6 +104,11 @@ const MainMenu = () => {
                 >
                   <a
                     href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // ป้องกันพฤติกรรมปกติของลิงก์ (ไม่ให้หน้าเลื่อน)
+                      alert(`คุณได้คลิกที่เมนู: ${item}`); // แสดง alert พร้อมชื่อเมนู
+                    }}
+                    // เพิ่ม
                     // เพิ่ม padding ด้านข้างให้ข้อความ
                     className={`block p-4 text-center text-lg ${
                       index === 1
