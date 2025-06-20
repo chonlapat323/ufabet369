@@ -1,0 +1,126 @@
+/* 
+  Header.module.css
+  CSS for the Header component
+*/
+
+.header {
+  padding: 0 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  /* The Image component will handle the size, this is for alignment */
+  display: flex;
+  align-items: center;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+}
+
+/* A container for the two main action buttons */
+.actionButtons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.yellowButton {
+  background-color: #facc15; /* yellow-400 */
+  color: #000;
+  font-weight: bold;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.5);
+  white-space: nowrap;
+}
+
+.yellowButton:hover {
+  background-color: #facc15;
+  color: white;
+}
+
+.loginForm {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.loginInput {
+  background-color: black; /* Light blueish-white background */
+  border: 2px solid white; /* Same color border to make it invisible */
+  color: white; /* Dark gray text */
+  text-align: left;
+  height: 40px;
+  border-radius: 9999px;
+  padding: 0 1rem;
+  transition: all 0.3s;
+}
+
+.loginInput::placeholder {
+  color: #6b7280; /* Medium gray placeholder text */
+}
+
+.loginInput:focus {
+  outline: none;
+  border-color: #facc15; /* yellow-400 */
+}
+
+.inputUser {
+  width: 128px;
+}
+
+.inputPass {
+  width: 128px;
+}
+
+.loginButton {
+  /* This button also uses the yellow button style */
+  composes: yellowButton;
+  padding: 0.6rem 2rem;
+  display: inline-block;
+  justify-items: center;
+}
+
+.actionButtons2 {
+  font-family: "Sarabun", Sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7em;
+  fill: #000000;
+  color: #000000;
+  background-color: #ffc609;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 0px 0px 10px 2px #ffc609;
+  padding: 6px 15px 6px 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem; /* 24px */
+  }
+  .actionButtons {
+    /* Hide the "ฝาก-ถอน" & "สมัครสมาชิก" buttons on smaller screens */
+    display: none;
+  }
+  .rightSide {
+    /* On mobile, center the content (which is just the login form) */
+    justify-content: center;
+  }
+}
